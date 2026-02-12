@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureFeedback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        p {
+            text-align: center;
+            color: #475569;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #cbd5f5;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>SecureFeedback</h2>
+    <p>Registro seguro de comentarios</p>
+
+    <form method="POST" action="/register">
+        <label for="name">Nombre completo</label>
+        <input 
+            type="text" 
+            name="name" 
+            id="name"
+            placeholder="Ej. Juan Pérez"
+            required 
+        >
+
+        <label for="email">Correo electrónico</label>
+        <input 
+            type="email" 
+            name="email" 
+            id="email"
+            placeholder="ejemplo@correo.com"
+            required 
+        >
+
+        <label for="comment">Comentario</label>
+        <textarea 
+            name="comment" 
+            id="comment"
+            placeholder="Ingrese su comentario o feedback"
+            required
+        ></textarea>
+
+        <button type="submit">Enviar información</button>
+    </form>
+
+    <footer>
+        Práctica académica – Seguridad en Aplicaciones Web
+    </footer>
+</div>
+
+</body>
+</html>
